@@ -26,12 +26,12 @@ TABLE OF CONTENTS:
 }
 
 body {
-	background: $secondary-color;
 	color: $accent-color;	
 	line-height: 1.5;
 	font-family: 'Gugi', cursive;
+	background: url("../../src/img/texture-bg.jpg") no-repeat center;
+	
 }
-
 
 h1 {
 	font-size: $header-font-size;
@@ -118,6 +118,7 @@ p{
 
 	h1 {
 		margin-bottom: 2em;
+		color: black;
 	}
 
 	a {
@@ -142,7 +143,7 @@ p{
   content: " ";
   display: block;
   margin: 0 auto;
-  transition: all .3s ease-in-out;
+  transition: all .7s ease-in-out;
   width: 0;
 }
 
@@ -150,7 +151,7 @@ p{
 .info-button:hover:before {
   backface-visibility: hidden;
   border-color: #fff;
-  transition:  .3s ease-in-out;
+  transition:  .7s ease-in-out;
   width: 20%;
 }
 
@@ -243,10 +244,16 @@ footer {
 @include desktop-bp {
 	.main-header {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
+
+
+		h1 {
+			margin-left: 20px;
+		}
 
 		 a {
-			margin-top: 10px;	
+			margin-top: 10px;
+			margin-left: 20px;	
 		}
 
 		ul {
@@ -258,7 +265,28 @@ footer {
 
 @include desktop-bp {
 	.row {
-		margin: auto;
 		display: flex;
+		flex-direction: row;
+	}
+
+	.col {
+		flex-direction: column;
+		align-content: center;
+		flex: 1;
+
+		a {
+			margin: auto;
+		}
+
+		h3 {
+			border: none;
+		}
+	}
+
+	.selected {
+		-webkit-box-shadow: inset 10px 10px 300px 53px rgba(0,0,0,0.75);
+		-moz-box-shadow: inset 10px 10px 300px 53px rgba(0,0,0,0.75);
+		box-shadow: inset 10px 10px 300px 53px rgba(0,0,0,0.75);
 	}
 }
+
